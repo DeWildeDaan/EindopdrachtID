@@ -455,9 +455,47 @@ a:focus {
   border: 0;
 }
 
+/*
+      Object: Boder bottom
+      ---
+      Add a bottom border 
+  */
+
+  .c-border-bottom{
+    border-bottom: 2px solid var(--global-color-accent);
+  }
+
+  /*
+      Object: Hide margin bottom
+      ---
+      Romove bottom margin
+  */
+  .c-card__content-address{
+    margin-bottom: -24px;
+  }
+
 /*------------------------------------*\
   #COMPONENTS
   \*------------------------------------*/
+
+/*
+      Object: Boder bottom
+      ---
+      Add a bottom border 
+  */
+
+  .c-border-bottom{
+    border-bottom: 2px solid var(--global-color-accent);
+  }
+
+  /*
+      Object: Hide margin bottom
+      ---
+      Romove bottom margin
+  */
+  .c-hide-margin-bottom{
+    margin-bottom: 0;
+  }
 
 /*
     Component: Header
@@ -466,7 +504,6 @@ a:focus {
 */
 
 .c-header {
-  border-bottom: 2px solid var(--global-color-accent);
   display: flex;
   align-items: center;
   justify-content:space-between;
@@ -549,6 +586,26 @@ a:focus {
     justify-content: space-between;
 }
 
+.c-card__content-title{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.c-card__content-availabiltiy{
+  display: flex;
+  align-items: center;
+}
+
+.c-card__content-status{
+  margin-left: 8px;
+  fill: var(--global-color-available);
+}
+
+.c-card__content-connection{
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0 0 0;
+}
 
 /*------------------------------------*\
   #UTILITIES
