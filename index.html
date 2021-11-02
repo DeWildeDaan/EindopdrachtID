@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="css/normalize.css" />
 	<link rel="stylesheet" href="css/screen.css" />
+    <script src="script/app.js"></script>
+    <script src="script/datahandler.js"></script>
 </head>
 <body>
 
@@ -15,181 +17,18 @@
             <div class="c-header c-border-bottom">
                 <h1 class="c-logo">Chargemap</h1>
                 <ul class="o-list-reset c-togglebtn">
-                    <li class="c-togglebtn__item c-togglebtn__radius-left c-togglebtn__selected">Listview</li>
-                    <li class="c-togglebtn__item c-togglebtn__radius-right">Mapview</li>
+                    <li class="c-togglebtn__item c-togglebtn__radius-left c-togglebtn__selected js-listview">Listview</li>
+                    <li class="c-togglebtn__item c-togglebtn__radius-right js-mapview">Mapview</li>
                 </ul>
             </div>
     </header>
 
     <div class="js-content">
 
-        <div class="c-cards">
-
-            <div class="c-card">
-                <div class="c-card__content c-card__content-title">
-                    <p>Mechelsesteenweg</p>
-                    <p>4.5km</p>
-                </div>
-                <div class="c-card__content">
-                    <p class="c-hide-margin-bottom">Mechelsesteenweg 20</p>
-                    <div class="c-card__content-availabiltiy">
-                        <p class="c-hide-margin-bottom">Public</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="c-card__content-status" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
-                    </div>
-                </div>
-                <div>
-                    <p> 9200 Dendermonde</p>
-                </div>
-                <div class="c-card__content c-border-bottom">
-                    <p class="c-hide-margin-bottom">Connection Type</p>
-                    <p class="c-hide-margin-bottom">Quantity</p>
-                </div>
-                <div>
-                    <div class="c-card__content-connection">
-                        <p class="c-hide-margin-bottom" >Type 2</p>
-                        <p class="c-hide-margin-bottom">2</p>
-                    </div>
-                    <div class="c-card__content-connection">
-                        <p class="c-hide-margin-bottom" >Type 2</p>
-                        <p class="c-hide-margin-bottom">2</p>
-                    </div>
-                    <div class="c-card__content-connection">
-                        <p class="c-hide-margin-bottom" >Type 2</p>
-                        <p class="c-hide-margin-bottom">2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="c-card">
-                <div class="c-card__content c-card__content-title">
-                    <p>Mechelsesteenweg</p>
-                    <p>4.5km</p>
-                </div>
-                <div class="c-card__content">
-                    <p class="c-hide-margin-bottom">Mechelsesteenweg 20</p>
-                    <div class="c-card__content-availabiltiy">
-                        <p class="c-hide-margin-bottom">Public</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="c-card__content-status" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
-                    </div>
-                </div>
-                <div>
-                    <p> 9200 Dendermonde</p>
-                </div>
-                <div class="c-card__content c-border-bottom">
-                    <p class="c-hide-margin-bottom">Connection Type</p>
-                    <p class="c-hide-margin-bottom">Quantity</p>
-                </div>
-                <div>
-                    <div class="c-card__content-connection">
-                        <p class="c-hide-margin-bottom" >Type 2</p>
-                        <p class="c-hide-margin-bottom">2</p>
-                    </div>
-                    <div class="c-card__content-connection">
-                        <p class="c-hide-margin-bottom" >Type 2</p>
-                        <p class="c-hide-margin-bottom">2</p>
-                    </div>
-                    <div class="c-card__content-connection">
-                        <p class="c-hide-margin-bottom" >Type 2</p>
-                        <p class="c-hide-margin-bottom">2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="c-card">
-                <div class="c-card__content c-card__content-title">
-                    <p>Mechelsesteenweg</p>
-                    <p>4.5km</p>
-                </div>
-                <div class="c-card__content">
-                    <p class="c-hide-margin-bottom">Mechelsesteenweg 20</p>
-                    <div class="c-card__content-availabiltiy">
-                        <p class="c-hide-margin-bottom">Public</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="c-card__content-status" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
-                    </div>
-                </div>
-                <div>
-                    <p> 9200 Dendermonde</p>
-                </div>
-                <div class="c-card__content c-border-bottom">
-                    <p class="c-hide-margin-bottom">Connection Type</p>
-                    <p class="c-hide-margin-bottom">Quantity</p>
-                </div>
-                <div>
-                    <div class="c-card__content-connection">
-                        <p class="c-hide-margin-bottom" >Type 2</p>
-                        <p class="c-hide-margin-bottom">2</p>
-                    </div>
-                    <div class="c-card__content-connection">
-                        <p class="c-hide-margin-bottom" >Type 2</p>
-                        <p class="c-hide-margin-bottom">2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="c-card">
-                <div class="c-card__content c-card__content-title">
-                    <p>Mechelsesteenweg</p>
-                    <p>4.5km</p>
-                </div>
-                <div class="c-card__content">
-                    <p class="c-hide-margin-bottom">Mechelsesteenweg 20</p>
-                    <div class="c-card__content-availabiltiy">
-                        <p class="c-hide-margin-bottom">Public</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="c-card__content-status" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
-                    </div>
-                </div>
-                <div>
-                    <p> 9200 Dendermonde</p>
-                </div>
-                <div class="c-card__content c-border-bottom">
-                    <p class="c-hide-margin-bottom">Connection Type</p>
-                    <p class="c-hide-margin-bottom">Quantity</p>
-                </div>
-                <div>
-                    <div class="c-card__content-connection">
-                        <p class="c-hide-margin-bottom" >Type 2</p>
-                        <p class="c-hide-margin-bottom">2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="c-card">
-                <div class="c-card__content c-card__content-title">
-                    <p>Mechelsesteenweg</p>
-                    <p>4.5km</p>
-                </div>
-                <div class="c-card__content">
-                    <p class="c-hide-margin-bottom">Mechelsesteenweg 20</p>
-                    <div class="c-card__content-availabiltiy">
-                        <p class="c-hide-margin-bottom">Public</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="c-card__content-status" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
-                    </div>
-                </div>
-                <div>
-                    <p> 9200 Dendermonde</p>
-                </div>
-                <div class="c-card__content c-border-bottom">
-                    <p class="c-hide-margin-bottom">Connection Type</p>
-                    <p class="c-hide-margin-bottom">Quantity</p>
-                </div>
-                <div>
-                    <div class="c-card__content-connection">
-                        <p class="c-hide-margin-bottom" >Type 2</p>
-                        <p class="c-hide-margin-bottom">2</p>
-                    </div>
-                    <div class="c-card__content-connection">
-                        <p class="c-hide-margin-bottom" >Type 2</p>
-                        <p class="c-hide-margin-bottom">2</p>
-                    </div>
-                    <div class="c-card__content-connection">
-                        <p class="c-hide-margin-bottom" >Type 2</p>
-                        <p class="c-hide-margin-bottom">2</p>
-                    </div>
-                </div>
-            </div>
-    
+        <div class="c-loader-body">
+            <div class="c-loader"></div>
         </div>
-
-        <div>
-
-        </div>
-
+        
     </div>
     
     

@@ -7,6 +7,8 @@
 \*------------------------------------*/
 
 :root {
+  --pi: 3.14159265359;
+
   /* Global colors */
   --global-color-back: #f0f2f0;
   --global-color-front: #9ca692;
@@ -598,7 +600,14 @@ a:focus {
 
 .c-card__content-status{
   margin-left: 8px;
+}
+
+.c-status-available{
   fill: var(--global-color-available);
+}
+
+.c-status-unavailable{
+  fill: var(--global-color-unavailable);
 }
 
 .c-card__content-connection{
@@ -606,6 +615,35 @@ a:focus {
   justify-content: space-between;
   margin: 8px 0 0 0;
 }
+
+/*
+    Component: Loading circle
+    ---
+    Loading circle
+*/
+
+.c-loader-body{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-loader {
+  border: 5px solid var(--global-color-front);
+  border-top: 5px solid var(--global-color-accent);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 /*------------------------------------*\
   #UTILITIES
