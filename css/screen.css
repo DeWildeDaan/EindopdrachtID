@@ -554,6 +554,7 @@ a:focus {
 }
 
 
+
 .c-togglebtn__radius-left {
   border-radius: 5px 0px 0px 5px;
 }
@@ -569,8 +570,13 @@ a:focus {
 
 .c-map {
 	height: 70vh;
-  border: 1px solid black;
+  border: 1px solid var(--global-color-front);
 	border-radius: 5px;
+}
+
+.c-marker__name{
+  font-size: 12px;
+  color: var(--global-color-front-dark);
 }
 
 /*

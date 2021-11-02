@@ -86,7 +86,7 @@ const showCards = function(jsonObject){
 }
 
 const showMap = function(jsonObject) {
-    map = L.map('mapid').setView([currentlat, currentlong], 16);
+    map = L.map('mapid').setView([currentlat, currentlong], 12);
 	L.tileLayer(provider, { attribution: copyright, maxZoom: 18, id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, accessToken: 'pk.eyJ1IjoiZGFhbmR3NSIsImEiOiJja21xYWVrY2IwbWo2MzBvOWNkdmdhMjlsIn0.2mkN44JAwQ3xoESwwRIJRw' }).addTo(map);
 	layergroup = L.layerGroup().addTo(map);
 
@@ -96,11 +96,16 @@ const showMap = function(jsonObject) {
 const showMarkers = function(jsonObject) {
     for (let point of jsonObject){
         let arrCoords = [point.AddressInfo.Latitude, point.AddressInfo.Longitude];
-        //let marker = L.marker(arrCoords).addTo(layergroup);
-        //marker.bindPopup(`<p>${point.AddressInfo.Title}</p>`, { className: 'c-popup' });
 
-        let marker = L.marker(arrCoords).addTo(layergroup);
-        marker.bindPopup(`<p>${point.AddressInfo.Title}</p>`);
+        var myIcon = L.icon({
+            iconUrl: '../img/Marker.svg',
+            iconSize: [32, 32],
+        });
+        let marker = L.marker(arrCoords, { icon: myIcon }).addTo(layergroup);
+        marker.bindPopup(`
+        <div>${point.AddressInfo.Title}, ${parseFloat(point.AddressInfo.Distance).toFixed(2)}km</div>
+        <div>${point.AddressInfo.AddressLine1}, ${point.AddressInfo.Postcode} ${point.AddressInfo.Town}</div>
+        `, { className: 'c-marker__name' });
     }
 }
 
