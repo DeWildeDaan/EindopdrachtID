@@ -142,12 +142,12 @@ const getCurrentLocation = function(){
 }
 
 const getReferenceData = function () {
-	let url = `https://api.openchargemap.io/v3/referencedata&key=${apikey1}&output`;
+	let url = `https://api.openchargemap.io/v3/referencedata&output`;
 	handleData(url, callbackReferencedata, callbackError, 'GET');
 };
 
 const getChargepointData = function(lat, long,){
-    let url = `https://api.openchargemap.io/v3/poi/?key=${apikey2}&output=json&countrycode=BE&latitude=${lat}&longitude=${long}&distance=10&distanceunit=KM&compact=true&verbose=false`;
+    let url = `https://api.openchargemap.io/v3/poi/?output=json&countrycode=BE&latitude=${lat}&longitude=${long}&distance=10&distanceunit=KM&compact=true&verbose=false`;
 	handleData(url, callbackChargepoints, callbackError, 'GET');
 }
 
