@@ -18,9 +18,7 @@ const showMapOrList = function(){
     if(mapview == true){
         htmlcontent.innerHTML = `
         <section class="o-row">
-            <div class="o-container">
-                <div class="c-map" id="mapid"></div>
-            </div>
+            <div class="c-map" id="mapid"></div>
         </section>  
     `;
         showMap(chargepointdata);

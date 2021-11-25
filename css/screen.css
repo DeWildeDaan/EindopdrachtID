@@ -513,6 +513,18 @@ a:focus {
   margin-bottom: 32px;
 }
 
+@media (max-width: 600px) {
+  .c-header{
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 430px) {
+  .c-header{
+    justify-content: center;
+  }
+}
+
 /*
     Component: Logo
     ---
@@ -523,6 +535,11 @@ a:focus {
   padding-left: 80px;
 }
 
+@media (max-width: 600px) {
+  .c-logo{
+    padding-left: 0;
+  }
+}
 /*
     Component: Toggle button
     ---
@@ -535,6 +552,12 @@ a:focus {
   line-height: 27px;
   padding-right: 80px;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .c-togglebtn{
+    padding-right: 0;
+  }
 }
 
 .c-togglebtn__item {
@@ -589,7 +612,14 @@ a:focus {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
+    width: 100%;
     justify-content: space-evenly;
+}
+
+@media (max-width: 600px) {
+  .c-cards{
+    justify-content: center;
+  }
 }
 
 .c-card{
@@ -599,6 +629,12 @@ a:focus {
     width: 368px;
     align-self: stretch;
     padding: 30px 8px;
+}
+
+@media (max-width: 600px) {
+  .c-card{
+    width: 95%;
+  }
 }
 
 .c-card__content{
@@ -633,7 +669,6 @@ a:focus {
   justify-content: space-between;
   margin: 8px 0 0 0;
 }
-
 /*
     Component: Loading circle
     ---
