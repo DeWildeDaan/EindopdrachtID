@@ -94,7 +94,7 @@ const showMap = function(jsonObject) {
 const showMarkers = function(jsonObject) {
     let arrCoords = [currentlat, currentlong];
     var myIcon = L.icon({
-        iconUrl: 'root/img/Pin.svg',
+        iconUrl: 'root/EindopdrachtID/img/Pin.svg',
         iconSize: [32, 32],
     });
     let marker = L.marker(arrCoords, { icon: myIcon }).addTo(layergroup);
@@ -105,7 +105,7 @@ const showMarkers = function(jsonObject) {
         let arrCoords = [point.AddressInfo.Latitude, point.AddressInfo.Longitude];
 
         var myIcon = L.icon({
-            iconUrl: 'root/img/Marker.svg',
+            iconUrl: 'root/EindopdrachtID/img/Marker.svg',
             iconSize: [32, 32],
         });
         let marker = L.marker(arrCoords, { icon: myIcon }).addTo(layergroup);
@@ -166,7 +166,6 @@ const listentoMapview = function () {
 		this.classList.add('c-togglebtn__selected');
 		htmllistview.classList.remove('c-togglebtn__selected');
         mapview = true;
-        console.log("map")
         showLoading();
 		showMapOrList();
 	});
@@ -177,7 +176,6 @@ const listentoListview = function () {
 		this.classList.add('c-togglebtn__selected');
 		htmlmapview.classList.remove('c-togglebtn__selected');
         mapview = false;
-        console.log("list");
         showLoading();
 		showMapOrList();
 	});
