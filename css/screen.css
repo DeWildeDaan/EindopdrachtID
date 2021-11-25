@@ -516,6 +516,7 @@ a:focus {
 @media (max-width: 600px) {
   .c-header{
     flex-wrap: wrap;
+    margin-bottom: 8px;
   }
 }
 
@@ -592,7 +593,7 @@ a:focus {
 */
 
 .c-map {
-	height: 70vh;
+	height: 80vh;
   border: 1px solid var(--global-color-front);
 	border-radius: 5px;
 }
