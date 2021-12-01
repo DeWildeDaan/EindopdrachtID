@@ -193,7 +193,7 @@ a:focus {
 
 .o-row {
   position: relative;
-  padding: 24px 24px 0;
+  padding: 0 24px 0;
   display: flow-root;
 }
 
@@ -493,13 +493,13 @@ a:focus {
   align-items: center;
   justify-content:space-between;
   height: 8em;
-  margin-bottom: 2em;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 600px) {
   .c-header{
     flex-wrap: wrap;
-    margin-bottom: 0.5em;
+    margin-bottom: 1rem;
   }
 }
 
@@ -576,6 +576,7 @@ a:focus {
 
 .c-map {
 	height: 80vh;
+  margin: 0 1rem 0;
   border: var(--global-borderWith) solid var(--global-color-front);
 	border-radius: var(--global-borderRadius);
 }

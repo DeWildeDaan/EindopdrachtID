@@ -17,7 +17,7 @@ let htmlmapview, htmllistview, htmlcontent, htmlcards, htmlmap;
 const showMapOrList = function(){
     if(mapview == true){
         htmlcontent.innerHTML = `
-        <section class="o-row">
+        <section>
             <div class="c-map" id="mapid"></div>
         </section>  
     `;
