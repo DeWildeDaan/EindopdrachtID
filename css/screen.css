@@ -597,6 +597,7 @@ a:focus {
     height: 100%;
     width: 100%;
     justify-content: space-evenly;
+    
 }
 
 @media (max-width: 600px) {
@@ -608,10 +609,10 @@ a:focus {
 .c-card{
     border: var(--global-borderWith) solid var(--global-color-accent);
     border-radius: var(--global-borderRadius);
-    margin-top: 2em;
     width: 23em;
     align-self: stretch;
     padding: 1.875em 0.5em;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 600px) {
