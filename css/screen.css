@@ -21,6 +21,8 @@
   --global-html-color: var(--global-color-front-dark);
   --global-html-backgroundColor: var(--global-color-back);
   --global-selection-backgroundColor: var(--global-color-front);
+  --global-borderWith: 0.0625em;
+  --global-borderRadius: 0.3125em;
 }
 
 /*------------------------------------*\
@@ -457,25 +459,6 @@ a:focus {
   border: 0;
 }
 
-/*
-      Object: Boder bottom
-      ---
-      Add a bottom border 
-  */
-
-  .c-border-bottom{
-    border-bottom: 2px solid var(--global-color-accent);
-  }
-
-  /*
-      Object: Hide margin bottom
-      ---
-      Romove bottom margin
-  */
-  .c-card__content-address{
-    margin-bottom: -24px;
-  }
-
 /*------------------------------------*\
   #COMPONENTS
   \*------------------------------------*/
@@ -487,7 +470,7 @@ a:focus {
   */
 
   .c-border-bottom{
-    border-bottom: 2px solid var(--global-color-accent);
+    border-bottom: 0.125em solid var(--global-color-accent);
   }
 
   /*
@@ -509,14 +492,14 @@ a:focus {
   display: flex;
   align-items: center;
   justify-content:space-between;
-  height: 128px;
-  margin-bottom: 32px;
+  height: 8em;
+  margin-bottom: 2em;
 }
 
 @media (max-width: 600px) {
   .c-header{
     flex-wrap: wrap;
-    margin-bottom: 8px;
+    margin-bottom: 0.5em;
   }
 }
 
@@ -533,7 +516,7 @@ a:focus {
 */
 
 .c-logo {
-  padding-left: 80px;
+  padding-left: 4rem;
 }
 
 @media (max-width: 600px) {
@@ -549,9 +532,7 @@ a:focus {
 
 .c-togglebtn {
   display: flex;
-  font-size: 20px;
-  line-height: 27px;
-  padding-right: 80px;
+  padding-right: 4rem;
   cursor: pointer;
 }
 
@@ -564,8 +545,9 @@ a:focus {
 .c-togglebtn__item {
   text-decoration: none;
   display: block;
-  padding: 8px 24px;
-  border: 1px solid var(--global-color-front);
+  padding: 0.5em 1.5em;
+  border: var(--global-borderWith) solid var(--global-color-front);
+  transition: background-color 0.1s ease-in;
 }
 
 .c-togglebtn__item:hover{
@@ -580,10 +562,10 @@ a:focus {
 
 
 .c-togglebtn__radius-left {
-  border-radius: 5px 0px 0px 5px;
+  border-radius: var(--global-borderRadius) 0 0 var(--global-borderRadius);
 }
 .c-togglebtn__radius-right {
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 0 var(--global-borderRadius) var(--global-borderRadius) 0;
 }
 
 /*
@@ -594,12 +576,12 @@ a:focus {
 
 .c-map {
 	height: 80vh;
-  border: 1px solid var(--global-color-front);
-	border-radius: 5px;
+  border: var(--global-borderWith) solid var(--global-color-front);
+	border-radius: var(--global-borderRadius);
 }
 
 .c-marker__name{
-  font-size: 12px;
+  font-size: 0.75em;
   color: var(--global-color-front-dark);
 }
 
@@ -624,12 +606,12 @@ a:focus {
 }
 
 .c-card{
-    border: 1px solid var(--global-color-accent);
-    border-radius: 5px;
-    margin-top: 32px;
-    width: 368px;
+    border: var(--global-borderWith) solid var(--global-color-accent);
+    border-radius: var(--global-borderRadius);
+    margin-top: 2em;
+    width: 23em;
     align-self: stretch;
-    padding: 30px 8px;
+    padding: 1.875em 0.5em;
 }
 
 @media (max-width: 600px) {
@@ -644,7 +626,7 @@ a:focus {
 }
 
 .c-card__content-title{
-  font-size: 20px;
+  font-size: 1.25em;
   font-weight: bold;
 }
 
@@ -654,7 +636,7 @@ a:focus {
 }
 
 .c-card__content-status{
-  margin-left: 8px;
+  margin-left: 0.5em;
 }
 
 .c-status-available{
@@ -668,7 +650,7 @@ a:focus {
 .c-card__content-connection{
   display: flex;
   justify-content: space-between;
-  margin: 8px 0 0 0;
+  margin: 0.5em 0 0 0;
 }
 /*
     Component: Loading circle
@@ -685,11 +667,11 @@ a:focus {
 }
 
 .c-loader {
-  border: 5px solid var(--global-color-front);
-  border-top: 5px solid var(--global-color-accent);
+  border: 0.3125em solid var(--global-color-front);
+  border-top: 0.3125em solid var(--global-color-accent);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 3.125em;
+  height: 3.125em;
   animation: spin 1s linear infinite;
 }
 
