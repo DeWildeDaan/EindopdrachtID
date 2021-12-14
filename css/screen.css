@@ -38,7 +38,8 @@
 html {
   font-size: 16px;
   line-height: 1.5;
-  font-family: sans-serif;
+  font-family:poppins, sans-serif;
+  font-weight: 300;
   box-sizing: border-box;
   background-color: var(--global-html-backgroundColor);
   color: var(--global-html-color);
@@ -471,6 +472,7 @@ a:focus {
 
   .c-border-bottom{
     border-bottom: 0.125em solid var(--global-color-accent);
+    width: 100%;
   }
 
   /*
@@ -593,52 +595,53 @@ a:focus {
 */
 
 .c-cards{
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
-    justify-content: space-evenly;
-    
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  
 }
 
 @media (max-width: 600px) {
-  .c-cards{
-    justify-content: center;
-  }
+.c-cards{
+  justify-content: center;
+}
 }
 
 .c-card{
-    border: var(--global-borderWith) solid var(--global-color-accent);
-    border-radius: var(--global-borderRadius);
-    width: 23em;
-    align-self: stretch;
-    padding: 1.875em 0.5em;
-    margin-bottom: 1rem;
+  border: var(--global-borderWith) solid var(--global-color-accent);
+  border-radius: var(--global-borderRadius);
+  width: 23em;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 4.25rem 1.625rem 1.625rem 3.625rem 1.625rem auto;
 }
 
 @media (max-width: 600px) {
-  .c-card{
-    width: 95%;
-  }
+.c-card{
+  width: 95%;
+}
 }
 
 .c-card__content{
-    display: flex;
-    justify-content: space-between;
+  margin-bottom: 0;
+  align-self: center;
+}
+
+.c-card__content-right{
+  justify-self: start;
+  padding-left: 0.5rem;
+}
+  .c-card__content-left{
+  justify-self: end;
+  padding-right: 0.5rem;
 }
 
 .c-card__content-title{
   font-size: 1.25em;
-  font-weight: bold;
-}
-
-.c-card__content-availabiltiy{
-  display: flex;
-  align-items: center;
-}
-
-.c-card__content-status{
-  margin-left: 0.5em;
+  font-weight: 400;
 }
 
 .c-status-available{
@@ -649,10 +652,14 @@ a:focus {
   fill: var(--global-color-unavailable);
 }
 
-.c-card__content-connection{
-  display: flex;
-  justify-content: space-between;
-  margin: 0.5em 0 0 0;
+.c-address-line{
+  grid-row-start: 3;
+  grid-column-end: span 2;
+}
+
+.c-access-type{
+  grid-row-start: 4;
+  grid-column-end: span 2;
 }
 /*
     Component: Loading circle

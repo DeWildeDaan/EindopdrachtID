@@ -43,39 +43,32 @@ const showCards = function(jsonObject){
     for(let point of jsonObject){
         let usagetype = referencedata.UsageTypes.find(x => x.ID === point.UsageTypeID);
         html += `
-            <div class="c-card">
-                <div class="c-card__content c-card__content-title">
-                    <p>${point.AddressInfo.Title}</p>
-                    <p>${parseFloat(point.AddressInfo.Distance).toFixed(2)}km</p>
-                </div>
-                <div class="c-card__content">
-                    <p class="c-hide-margin-bottom">${point.AddressInfo.AddressLine1}</p>
-                    <div class="c-card__content-availabiltiy">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="c-card__content-status c-status-${(point.StatusTypeID === 140|15|10) ? 'available':'unavailable'}" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
-                    </div>
-                </div>
-                <div>
-                    <p> ${point.AddressInfo.Postcode}, ${point.AddressInfo.Town}</p>
-                    <p> ${point.UsageTypeID ? usagetype.Title : "Unknown"}</p>
-                </div>
-                <div class="c-card__content c-border-bottom">
-                    <p class="c-hide-margin-bottom">Connection Type</p>
-                    <p class="c-hide-margin-bottom">Quantity</p>
-                </div>
-                <div>
+        <div class="c-card">
+                
+        <p class="c-card__content c-card__content-right c-card__content-title">${point.AddressInfo.Title}</p> 
+        <p class="c-card__content c-card__content-title c-card__content-left">${parseFloat(point.AddressInfo.Distance).toFixed(2)}km</p>
+       
+        <p class="c-card__content c-card__content-right">${point.AddressInfo.AddressLine1}</p>
+        <svg xmlns="http://www.w3.org/2000/svg" class="c-card__content c-card__content-left c-card__content-status c-status-${(point.StatusTypeID === 140|15|10) ? 'available':'unavailable'}" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
+        
+        <p class="c-card__content c-card__content-right c-address-line">${point.AddressInfo.Postcode}, ${point.AddressInfo.Town}</p>
+        
+        <p class="c-card__content c-card__content-right c-access-type">${point.UsageTypeID ? usagetype.Title : "Unknown"}</p>
+        
+        <p class="c-card__content c-border-bottom c-card__content-right">Connection Type</p>
+        <p class="c-card__content c-border-bottom c-card__content-left">Quantity</p>
+        
     `;
     for(let connection of point.Connections){
         let connectiontype = referencedata.ConnectionTypes.find(x => x.ID === connection.ConnectionTypeID);
         html+= `
-                    <div class="c-card__content-connection">
-                        <p class="c-hide-margin-bottom" >${connectiontype.Title}</p>
-                        <p class="c-hide-margin-bottom">${connection.Quantity}</p>
-                    </div>
+        <p class="c-card__content c-card__content-right" >${connectiontype.Title}</p>
+        <p class="c-card__content c-card__content-left">${connection.Quantity}</p>
         `;
     }
     html+= `
-                </div>
-            </div>
+                
+    </div>
     `;
     }
 
