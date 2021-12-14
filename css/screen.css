@@ -603,12 +603,6 @@ a:focus {
   
 }
 
-@media (max-width: 600px) {
-.c-cards{
-  justify-content: center;
-}
-}
-
 .c-card{
   border: var(--global-borderWith) solid var(--global-color-accent);
   border-radius: var(--global-borderRadius);
@@ -617,12 +611,6 @@ a:focus {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: 4.25rem 1.625rem 1.625rem 3.625rem 1.625rem auto;
-}
-
-@media (max-width: 600px) {
-.c-card{
-  width: 95%;
-}
 }
 
 .c-card__content{
@@ -661,6 +649,26 @@ a:focus {
   grid-row-start: 4;
   grid-column-end: span 2;
 }
+
+@media (max-width: 600px) {
+  .c-cards{
+  justify-content: center;
+}
+
+  .c-card{
+    width: 95%;
+  }
+
+  
+  .c-card__content{
+    font-size: 0.875em;
+  }
+
+  .c-card__content-title{
+    font-size: 1em;
+  }
+
+  }
 /*
     Component: Loading circle
     ---
