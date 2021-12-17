@@ -498,6 +498,7 @@ a:focus {
   margin-bottom: 1rem;
   background-color: var(--global-color-back);
   position: fixed;
+  z-index: 10000;
   top: 0;
 }
 

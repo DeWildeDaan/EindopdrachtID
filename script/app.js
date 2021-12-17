@@ -87,7 +87,7 @@ const showMap = function(jsonObject) {
 const showMarkers = function(jsonObject) {
     let arrCoords = [currentlat, currentlong];
     var myIcon = L.icon({
-        iconUrl: '../img/Pin.svg',
+        iconUrl: '/chargemap/img/Pin.svg',
         iconSize: [32, 32],
     });
     let marker = L.marker(arrCoords, { icon: myIcon }).addTo(layergroup);
@@ -98,7 +98,7 @@ const showMarkers = function(jsonObject) {
         let arrCoords = [point.AddressInfo.Latitude, point.AddressInfo.Longitude];
 
         var myIcon = L.icon({
-            iconUrl: '../img/Marker.svg',
+            iconUrl: '/chargemap/img/Marker.svg',
             iconSize: [32, 32],
         });
         let marker = L.marker(arrCoords, { icon: myIcon }).addTo(layergroup);
