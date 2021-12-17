@@ -62,8 +62,8 @@ const showCards = function(jsonObject){
     for(let connection of point.Connections){
         let connectiontype = referencedata.ConnectionTypes.find(x => x.ID === connection.ConnectionTypeID);
         html+= `
-        <p class="c-card__content c-card__content-right" >${connectiontype.Title}</p>
-        <p class="c-card__content c-card__content-left">${connection.Quantity}</p>
+        <p class="c-card__content c-card__content-connection c-card__content-right" >${connectiontype.Title}</p>
+        <p class="c-card__content c-card__content-connection c-card__content-left">${connection.Quantity}</p>
         `;
     }
     html+= `
