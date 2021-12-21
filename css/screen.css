@@ -31,7 +31,7 @@
   :root {
   --global-html-color: var(--global-color-back);
   --global-html-backgroundColor: var(--global-color-front-dark);
-  --global-color-accent: var(--global-color-back);
+  --global-color-accent: #aab19d;
   --global-html-loader-back: var(--global-color-front-dark);
   --global-html-loader-front: var(--global-color-front);
   }
@@ -568,7 +568,7 @@ a:focus {
   text-decoration: none;
   display: block;
   padding: 0.5em 1.5em;
-  border: var(--global-borderWith) solid var(--global-color-front);
+  border: var(--global-borderWith) solid var(--global-color-accent);
   transition: background-color 0.1s ease-in;
 }
 
