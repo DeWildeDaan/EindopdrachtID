@@ -12,7 +12,7 @@
   /* Global colors */
   --global-color-back: #f0f2f0;
   --global-color-front: #9ca692;
-  --global-color-front-dark: #1c2606;
+  --global-color-front-dark: #21221d;
   --global-color-accent: #6c735d;
   --global-color-available: #96cb61;
   --global-color-unavailable: #d26200;
@@ -21,8 +21,20 @@
   --global-html-color: var(--global-color-front-dark);
   --global-html-backgroundColor: var(--global-color-back);
   --global-selection-backgroundColor: var(--global-color-front);
+  --global-html-loader-back: var(--global-color-front);
+  --global-html-loader-front: var(--global-color-accent);
   --global-borderWith: 0.0625em;
   --global-borderRadius: 0.3125em;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --global-html-color: var(--global-color-back);
+  --global-html-backgroundColor: var(--global-color-front-dark);
+  --global-color-accent: var(--global-color-back);
+  --global-html-loader-back: var(--global-color-front-dark);
+  --global-html-loader-front: var(--global-color-front);
+  }
 }
 
 /*------------------------------------*\
@@ -66,7 +78,7 @@ body {
 
 ::selection {
   background: var(--global-selection-backgroundColor);
-  color: white;
+  color: var(--global-color-back);
   text-shadow: none;
 }
 
@@ -496,7 +508,7 @@ a:focus {
   justify-content:space-between;
   height: 8em;
   margin-bottom: 1rem;
-  background-color: var(--global-color-back);
+  background-color: var(--global-html-backgroundColor);
   position: fixed;
   z-index: 10000;
   top: 0;
@@ -593,7 +605,7 @@ a:focus {
 
 .c-marker__name{
   font-size: 0.75em;
-  color: var(--global-color-front-dark);
+  color: var(--global-html-color);
 }
 
 /*
@@ -696,8 +708,8 @@ a:focus {
 }
 
 .c-loader {
-  border: 0.3125em solid var(--global-color-front);
-  border-top: 0.3125em solid var(--global-color-accent);
+  border: 0.3125em solid var(--global-html-loader-back);
+  border-top: 0.3125em solid var(--global-html-loader-front);
   border-radius: 50%;
   width: 3.125em;
   height: 3.125em;
